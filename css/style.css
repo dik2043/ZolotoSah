@@ -1,3 +1,91 @@
 body {
-  max-width: 410px;
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  max-width: 1400px;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+.page-header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 10px;
+  outline: 2px solid lightgreen;
+}
+.page-header__logo {
+  display: block;
+  width: 150px;
+  margin: auto auto 20px auto;
+  padding-top: 30px;
+}
+.page-header__contacts {
+  width: 150px;
+  margin: auto auto 20px auto;
+  font-family: 'PT Sans', sans-serif;
+  text-align: center;
+}
+.page-header__tel {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold;
+}
+.page-header__mail {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  color: #ff4040;
+}
+.page-header__call {
+  display: block;
+  margin-top: 10px;
+  padding: 5px 0;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #b82527;
+  background: linear-gradient(to top, #db3232, #ff503a);
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #a51e22;
+}
+.site-list__toggle {
+  position: absolute;
+  top: 23px;
+  right: -10px;
+  width: 24px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  background-color: inherit;
+  outline: none;
+  border: none;
+}
+.site-list__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 2px;
+  box-shadow: 0 8px 0 0 #db3232, 0 16px 0 0 #db3232;
+  background-color: #db3232;
+}
+.site-list {
+  width: 250px;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+  background-color: white;
+  outline: 1px solid black;
+}
+.site-list__item a {
+  display: block;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 18px;
+  text-align: center;
+  color: #ff4040;
 }
