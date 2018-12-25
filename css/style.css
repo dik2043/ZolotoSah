@@ -14,6 +14,9 @@ body {
   padding: 0 10px;
   outline: 2px solid lightgreen;
 }
+.page-header__wrapper {
+  margin-bottom: 10px;
+}
 .page-header__logo {
   display: block;
   width: 150px;
@@ -63,7 +66,28 @@ body {
   outline: none;
   border: none;
 }
-.site-list__toggle::before {
+.--opened .site-list__toggle::before,
+.--opened .site-list__toggle::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background-color: #222222;
+}
+.--opened .site-list__toggle::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.--opened .site-list__toggle::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.--opened .site-list {
+  position: absolute;
+}
+.--closed .site-list__toggle::before {
   content: "";
   position: absolute;
   top: 0;
@@ -73,13 +97,24 @@ body {
   box-shadow: 0 8px 0 0 #db3232, 0 16px 0 0 #db3232;
   background-color: #db3232;
 }
+.--closed .site-list {
+  display: none;
+}
+.--no-js .site-list__toggle {
+  display: none;
+}
+.--no-js .site-list {
+  position: static;
+}
 .site-list {
-  width: 250px;
+  width: 100%;
   margin: auto;
   padding: 0;
   list-style: none;
   background-color: white;
-  outline: 1px solid black;
+}
+.site-list--no-js {
+  position: static;
 }
 .site-list__item a {
   display: block;
