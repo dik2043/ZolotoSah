@@ -12,7 +12,6 @@ body {
   flex-direction: column;
   width: 100%;
   padding: 0 10px;
-  outline: 2px solid lightgreen;
 }
 .page-header__wrapper {
   margin-bottom: 10px;
@@ -112,6 +111,7 @@ body {
   padding: 0;
   list-style: none;
   background-color: white;
+  border-top: 1px solid #972625;
 }
 .site-list--no-js {
   position: static;
@@ -123,4 +123,75 @@ body {
   font-size: 18px;
   text-align: center;
   color: #ff4040;
+}
+.page-main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.about {
+  width: 100%;
+  margin: 0;
+  padding: 30px 10px;
+  color: white;
+  background: url("../img/small/55.png") 60% 0 no-repeat;
+  background-color: #29272e;
+}
+.about__title {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  line-height: 40px;
+  text-align: center;
+  font-weight: normal;
+}
+.about__to-order {
+  display: block;
+  width: 150px;
+  margin: 170px auto auto auto;
+  padding: 5px 0;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #b82527;
+  text-align: center;
+  word-break: break-all;
+  background: linear-gradient(to top, #39b64a, #3cbf4d);
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #a51e22;
+}
+.catalog-salmon {
+  width: 100%;
+  padding: 30px 10px;
+  outline: 1px solid orange;
+}
+.catalog-salmon__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 650px;
+  margin: 20px auto 0 auto;
+  padding: 0;
+}
+.catalog-salmon__item {
+  display: flex;
+  max-width: 320px;
+  margin: auto;
+}
+.catalog-salmon__item picture {
+  width: 130px;
+}
+.catalog-salmon__img {
+  width: 100%;
+}
+.catalog-salmon__info {
+  max-width: 190px;
+}
+.title {
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+  line-height: 50px;
+  color: #e13733;
+  text-align: center;
 }
