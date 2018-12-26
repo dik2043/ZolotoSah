@@ -4,6 +4,7 @@ var containers = document.getElementsByClassName('catalog-salmon__item');
 var pics;
 var number;
 var trs;
+var spans;
 
 
 for (count = 0; count < containers.length; count++) {
@@ -13,27 +14,75 @@ for (count = 0; count < containers.length; count++) {
         number = this.num;
         trs = containers[number].getElementsByClassName('js-tr');
         pics = containers[number].getElementsByTagName('picture');
-        // console.log(pics);
-        var index = Array.prototype.indexOf.call(trs, event.target);
-        console.log(index);
-        if (pics[index].classList.contains('js-show')) {
-            console.log('ok');
-        } else {
-            for (var i = 0; i < pics.length; i++) {
-                pics[i].classList.remove('js-show');
-            }
-            pics[index].classList.add('js-show');
-        }
+        spans = containers[number].getElementsByClassName('js-sp');
 
-        if (trs[index].classList.contains('js-color')) {
-            console.log('ok');
-        } else {
-            for (var i = 0; i < trs.length; i++) {
-                trs[i].classList.remove('js-color');
+        // console.log(trs);
+        // console.log(spans);
+        var index = Array.prototype.indexOf.call(trs, event.target);
+        var index2 = Array.prototype.indexOf.call(spans, event.target);
+        console.log(index2);
+        
+        if (index2 != -1) {
+            if (pics[index2].classList.contains('js-show')) {
+                console.log('ok');
+            } else {
+                for (var i = 0; i < pics.length; i++) {
+                    pics[i].classList.remove('js-show');
+                }
+                pics[index2].classList.add('js-show');
             }
-            trs[index].classList.add('js-color');
+
+            if (trs[index2].classList.contains('js-color')) {
+                console.log('ok');
+            } else {
+                for (var i = 0; i < trs.length; i++) {
+                    trs[i].classList.remove('js-color');
+                }
+                trs[index2].classList.add('js-color');
+            }
+        } else {
+        
+            if (pics[index].classList.contains('js-show')) {
+                console.log('ok');
+            } else {
+                for (var i = 0; i < pics.length; i++) {
+                    pics[i].classList.remove('js-show');
+                }
+                pics[index].classList.add('js-show');
+            }
+    
+            if (trs[index].classList.contains('js-color')) {
+                console.log('ok');
+            } else {
+                for (var i = 0; i < trs.length; i++) {
+                    trs[i].classList.remove('js-color');
+                }
+                trs[index].classList.add('js-color');
+            }
         }
         
+        
+        // ``````````````````````````````````````````````````````````````````````````````````
+        // var index2 = Array.prototype.indexOf.call(spans, event.target);
+        // console.log(index2);
+        // if (pics[index2].classList.contains('js-show')) {
+        //     console.log('ok');
+        // } else {
+        //     for (var i = 0; i < pics.length; i++) {
+        //         pics[i].classList.remove('js-show');
+        //     }
+        //     pics[index2].classList.add('js-show');
+        // }
+        //
+        // if (spans[index2].classList.contains('js-color')) {
+        //     console.log('ok');
+        // } else {
+        //     for (var i = 0; i < spans.length; i++) {
+        //         spans[i].classList.remove('js-color');
+        //     }
+        //     spans[index2].classList.add('js-color');
+        // }
+        //
     }, false);
 }
 
