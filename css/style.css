@@ -143,7 +143,7 @@ picture {
   margin: 0;
   padding: 30px 10px;
   color: white;
-  background: url("../img/small/55.png") 60% 0 no-repeat;
+  background: url("../img/small/mobile-back.png") 9git 0% 0 no-repeat;
   background-color: #29272e;
 }
 .about__title {
@@ -248,6 +248,84 @@ picture {
 .catalog-salmon__table-wrap .catalog-salmon__table-tr {
   padding: 5px 15px;
 }
+.catalog-halibut {
+  width: 100%;
+  padding: 30px 10px;
+  outline: 1px solid orange;
+}
+.catalog-halibut__list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 650px;
+  margin: 40px auto 0 auto;
+  padding: 0;
+}
+.catalog-halibut__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 320px;
+  margin: auto auto 30px auto;
+}
+.catalog-halibut__item picture {
+  align-items: center;
+  width: 115px;
+}
+.catalog-halibut__img {
+  width: 100%;
+}
+.catalog-halibut__info {
+  min-width: 185px;
+  max-width: 185px;
+}
+.catalog-halibut__item-title,
+.catalog-halibut__description,
+.catalog-halibut__info p {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+}
+.catalog-halibut__description {
+  width: 100%;
+}
+.catalog-halibut__table-tr {
+  box-sizing: border-box;
+  width: 100%;
+  cursor: pointer;
+}
+.catalog-halibut__table-tr:hover {
+  background-color: #e6e6e6;
+}
+.catalog-halibut__item-title {
+  width: 100%;
+  font-size: 18px;
+  font-weight: bold;
+}
+.catalog-halibut__info-wrapper {
+  margin-top: 10px;
+}
+.catalog-halibut__info-wrapper .catalog-halibut__table-title {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  font-size: 12px;
+  font-weight: normal;
+}
+.catalog-halibut__info-wrapper .catalog-halibut__table-tr {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 35px 5px 20px;
+  font-size: 16px;
+  text-align: center;
+}
+.catalog-halibut__table-wrap {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+}
+.catalog-halibut__table-wrap .catalog-halibut__table-tr {
+  padding: 5px 15px;
+}
 .title {
   margin: 0;
   padding: 0;
@@ -255,4 +333,21 @@ picture {
   line-height: 50px;
   color: #e13733;
   text-align: center;
+}
+.request {
+  display: block;
+  width: 170px;
+  margin: 30px auto auto auto;
+  padding: 10px 0;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px #b82527;
+  text-align: center;
+  word-break: break-all;
+  cursor: pointer;
+  background: linear-gradient(to top, #dc3232, #fe503a);
+  border-radius: 5px;
+  box-shadow: 0 2px 0 #a51e22;
+  border: none;
 }
