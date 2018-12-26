@@ -9,19 +9,27 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 650px;
-  margin: 20px auto 0 auto;
+  margin: 40px auto 0 auto;
   padding: 0;
 }
 
 .catalog-salmon__item {
   display: flex;
   max-width: 320px;
-  margin: auto;
+  margin: auto auto 30px auto;
+  
+  outline: 1px solid black;
 }
 
 .catalog-salmon__item picture {
+  //display: none;
+  align-items: center;
   width: 130px;
 }
+
+//.catalog-salmon__item picture:nth-child(2) {
+//  display: none;
+//}
 
 .catalog-salmon__img {
   width: 100%;
@@ -29,4 +37,53 @@
 
 .catalog-salmon__info {
   max-width: 190px;
+}
+
+.catalog-salmon__item-title,
+.catalog-salmon__description,
+.catalog-salmon__table,
+.catalog-salmon__table tr,
+.catalog-salmon__table th,
+.catalog-salmon__table td {
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-salmon__table tr:not(:first-child) {
+  cursor: pointer;
+}
+
+.catalog-salmon__table tr:not(:first-child):hover {
+  background-color: #e6e6e6;
+}
+
+.catalog-salmon__table tr:nth-child(2) {
+  background-color: #cdcdcd;
+}
+
+.catalog-salmon__item-title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.catalog-salmon__table {
+  margin-top: 10px;
+}
+
+.catalog-salmon__table th {
+  width: 50%;
+  padding-bottom: 10px;
+  
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.catalog-salmon__table td {
+  padding: 5px;
+  
+  font-size: 16px;
+  text-align: center;
+  
+  cursor: pointer;
 }
