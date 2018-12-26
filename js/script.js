@@ -11,27 +11,27 @@ for (count = 0; count < containers.length; count++) {
     containers[count].addEventListener("click", function(event) {
         console.log(this.num);
         number = this.num;
-        trs = containers[number].getElementsByClassName('tr');
+        trs = containers[number].getElementsByClassName('js-tr');
         pics = containers[number].getElementsByTagName('picture');
         // console.log(pics);
         var index = Array.prototype.indexOf.call(trs, event.target);
         console.log(index);
-        if (pics[index].classList.contains('show')) {
+        if (pics[index].classList.contains('js-show')) {
             console.log('ok');
         } else {
             for (var i = 0; i < pics.length; i++) {
-                pics[i].classList.remove('show');
+                pics[i].classList.remove('js-show');
             }
-            pics[index].classList.add('show');
+            pics[index].classList.add('js-show');
         }
 
-        if (trs[index].classList.contains('color')) {
+        if (trs[index].classList.contains('js-color')) {
             console.log('ok');
         } else {
             for (var i = 0; i < trs.length; i++) {
-                trs[i].classList.remove('color');
+                trs[i].classList.remove('js-color');
             }
-            trs[index].classList.add('color');
+            trs[index].classList.add('js-color');
         }
         
     }, false);
