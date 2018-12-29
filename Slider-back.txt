@@ -1,0 +1,7 @@
+<ul class="slider__nav-list">
+                        <li class="slider__nav-item slider__nav-item--active"><a>О компании</a></li>
+                        <li class="slider__nav-item"><a href="#">Опт и розница</a></li>
+                        <li class="slider__nav-item"><a href="#">Условия поставки</a></li>
+                        <li class="slider__nav-item"><a href="#">Склад и хранение</a></li>
+                        <li class="slider__nav-item"><a href="#">Логистика</a></li>
+                    </ul>

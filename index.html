@@ -13,7 +13,7 @@
 
     <header class="page-header">
         <div class="page-header__wrapper">
-            <img class="page-header__logo" src="../img/small/ZSlogo.png">
+            <img class="page-header__logo" src="img/small/ZSlogo.png">
             <div class="page-header__contacts">
                 <p class="page-header__tel">+7 495 983-34-67</p>
                 <a class="page-header__mail" href="mailto:hello@zolotosah.ru">hello@zolotosah.ru</a>
@@ -266,19 +266,58 @@
             <button class="catalog-halibut__request request">Запросить прайс</button>
         </section>
         
-        <section class="slider">
-            <div class="slider__container">
-                <nav class="slider__nav">
-                    <ul class="slider__nav-list">
-                        <li class="slider__nav-item slider__nav-item--active"><a>О компании</a></li>
-                        <li class="slider__nav-item"><a href="#">Опт и розница</a></li>
-                        <li class="slider__nav-item"><a href="#">Условия поставки</a></li>
-                        <li class="slider__nav-item"><a href="#">Склад и хранение</a></li>
-                        <li class="slider__nav-item"><a href="#">Логистика</a></li>
-                    </ul>
-                </nav>
+        <section class="slider__main">
+            <nav class="slider__nav">
+                <div class="slider">
+                    <div class="slider__wrapper">
+                        <div class="slider__item">
+                            <div class="slider__back slider__back-1"></div>
+                            <p class="slider__about slider__about-1">
+                                «Золото Сахалина» поставляет красную икру шести видов лососёвых: чавычи, кижуча, нерки, кеты и горбуши. У нас давние и надёжные поставщики сырья — икру мы закупаем напрямую у производителей Камчатки и Сахалина.
+                                «Работать с лучшими» — это наш принцип, поэтому у нас всегда качественный продукт и гарантированные сроки поставок.
+                            </p>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__back slider__back-2"></div>
+                            <p class="slider__about slider__about-2">
+                                Мы работаем с разными клиентами. От торговых компаний и супермаркетов, до индивидуальных предпринимателей. Работая на этом рынке с 2008 года, мы поняли — один постоянный клиент выгоднее, чем десять одноразовых продаж. Поэтому с каждым покупателем мы ищем такие условия, которые помогут заработать нам и экономить ему.
+                                Партия икры весом 25 кг — уже опт. Чем больше партия, тем меньше цена за килограмм.
+                            </p>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__back slider__back-3"></div>
+                            <p class="slider__about slider__about-3">
+                                Первую икру мы поставляем в начале июня. Объём поставок гарантирован и не зависитот чётности рыбного года.
+                                Вне зависимости от объёма продукция снабжается необходимыми для легальной торговли сертификатами и документами. Вы можете ознакомиться с ними в разделе «Документация»
+                            </p>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__back slider__back-4"></div>
+                            <p class="slider__about slider__about-4">
+                                Раз в неделю свежая икра с Дальнего востока доставляется самолётом в Москву. Здесь она хранится на собственных складах в специальных холодильных камерах при температуре от -4 до -6 градусов по Цельсию.
+                                Правильный режим хранения сохраняет товарный вид и полезные свойства продукта.
+                            </p>
+                        </div>
+                        <div class="slider__item">
+                            <div class="slider__back slider__back-5"></div>
+                            <p class="slider__about slider__about-5">
+                                Мы продаём икру в 50 городах России. В разделе «Контакты»  вы найдёте контактные телефоны компании «Золото Сахалина» и договоритесь о ценах, условиях и способе доставки.
+                                Объём поставок гарантирован и не зависит от чётности рыбного года. Вся продукция снабжается необходимыми для легальной торговли сертификатами и документами.
+                            </p>
+                        </div>
+                    </div>
+                    <a class="slider__control slider__control_left" role="button" onclick="minusSlide()"></a>
+                    <a class="slider__control slider__control_right" role="button" onclick="plusSlide()"></a>
+                </div>
+            </nav>
+            <div class="slider__links">
+                <a class="slider__link-item" onclick="currentSlide(1)"></a>
+                <a class="slider__link-item" onclick="currentSlide(2)"></a>
+                <a class="slider__link-item" onclick="currentSlide(3)"></a>
+                <a class="slider__link-item" onclick="currentSlide(4)"></a>
+                <a class="slider__link-item" onclick="currentSlide(5)"></a>
             </div>
-            <button class="slider__request request">Запросить прайс</button>
+            <!--<button class="slider__request request">Запросить прайс</button>-->
         </section>
         
         <section class="garant">
@@ -366,9 +405,10 @@
         </ul>
     </footer>
 
+    
     <script src="js/navigation.js "></script>
-    <!--<script src="js/scriptSalmon.js "></script>-->
     <script src="js/scriptHalibut.js "></script>
+    <script src="js/slider-2.js "></script>
 
 </body>
 
