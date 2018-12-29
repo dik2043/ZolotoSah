@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta id="meta" name="viewport" content="width=device-width">
+    <meta id="meta" name="viewport" content="width=device-width,initial-scale=1">
     <title>Золото Сахалина</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Ubuntu:400,700" rel="stylesheet">
@@ -310,14 +310,16 @@
                     <a class="slider__control slider__control_right" role="button" onclick="plusSlide()"></a>
                 </div>
             </nav>
-            <div class="slider__links">
-                <a class="slider__link-item" onclick="currentSlide(1)"></a>
-                <a class="slider__link-item" onclick="currentSlide(2)"></a>
-                <a class="slider__link-item" onclick="currentSlide(3)"></a>
-                <a class="slider__link-item" onclick="currentSlide(4)"></a>
-                <a class="slider__link-item" onclick="currentSlide(5)"></a>
+            <div class="slider__mask">
+                <div class="slider__links">
+                    <a class="slider__link-item" onclick="currentSlide(1)"></a>
+                    <a class="slider__link-item" onclick="currentSlide(2)"></a>
+                    <a class="slider__link-item" onclick="currentSlide(3)"></a>
+                    <a class="slider__link-item" onclick="currentSlide(4)"></a>
+                    <a class="slider__link-item" onclick="currentSlide(5)"></a>
+                </div>
             </div>
-            <!--<button class="slider__request request">Запросить прайс</button>-->
+            <button class="slider__request request">Запросить прайс</button>
         </section>
         
         <section class="garant">
