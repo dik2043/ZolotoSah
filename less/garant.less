@@ -1,0 +1,83 @@
+.garant {
+  width: 100%;
+  min-height: 730px;
+  margin-top: 40px;
+  padding-top: 30px;
+  
+  color: white;
+  
+  background: url("../img/small/color2.png");
+  //background-color: #282a2e;
+  background-size: auto 100%;
+  
+  //outline: 1px solid black;
+}
+
+.garant .garant__title {
+  color: white;
+}
+
+.garant__list {
+  margin: 0;
+  padding: 0 20px;
+  
+  list-style: none;
+}
+
+
+.garant__item-title {
+  margin: 25px 0 15px 0;
+  padding: 0;
+  
+  font-family: 'PF Din Text Comp Pro', sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.garant__item-description {  
+  overflow: hidden;
+  
+  margin: 0;
+  padding: 0;
+}
+
+.garant__item-description--1 {
+  position: relative;
+  height: 180px;
+}
+
+.garant__item-description--1::before {
+  content: "Быстрая доставка — гарантия того, что на вашем прилавке будет самая свежая икра";
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  height: auto;
+  padding: 10px;
+  
+  font-size: 14px;
+  color: black;
+  font-style: italic;
+  
+  background-color: #dadada;
+}
+
+.garant__item-description--1::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: -28px;
+  bottom: 10px;
+
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  
+  transform: rotate(45deg);
+  //border-right: 20px solid #dadada;
+  border-top: 20px solid #dadada;
+}
