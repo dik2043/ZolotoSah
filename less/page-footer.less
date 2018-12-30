@@ -1,3 +1,94 @@
 .page-footer {
+  display: flex;
+  flex-direction: column;
+
+  color: white;
+  
+  background-color: #151c1c;
   outline: 1px solid black;
+}
+
+.page-footer__list {
+  margin: 0;
+  padding: 0 10px;
+  
+  list-style: none;
+}
+
+.page-footer__item--info {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: auto;
+}
+
+.page-footer__item {
+  margin-top: 20px;
+}
+
+.page-footer__info {  
+  display: flex;
+  
+  font-size: 10px;  
+  font-weight: normal;
+  align-items: flex-end;
+}
+
+.page__footer-logo {
+  flex-grow: 1;
+  display: block;
+  width: 40px;
+  height: 60px;
+  margin: 12px 0;
+  
+  background: url("../img/small/ZS-white.png") no-repeat;
+  background-size: contain;
+}
+
+.page-footer__nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  WIDTH: 240px;
+  height: 85px;
+  margin: auto;
+  padding: 0;
+  
+  list-style: none;
+}
+
+.page-footer__nav-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 50%;
+  padding: 5px 0;
+  
+  font-size: 12px;
+}
+
+.page-footer__nav-item a {
+  color: white;
+  text-decoration: underline;
+}
+
+.page-footer__item--design {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+
+.page-footer__item--design a {
+  display: block;
+  width: 50px;
+  height: 30px;
+  margin: auto;
+  padding-top: 4px;
+  padding-left: 40px;
+  
+  opacity: 0.5;
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+  
+  background: url("../img/small/ED2.png") no-repeat;
+  //outline: 1px solid white;
 }

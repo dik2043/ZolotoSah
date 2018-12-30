@@ -593,11 +593,11 @@ body .js-color {
 .coordinates {
   display: flex;
   flex-direction: column;
-  background: url("../img/small/ZS-bottom.png") 50% 30px no-repeat;
+  background: url("../img/small/ZS-bottom.png") 50% 50px no-repeat;
 }
 .coordinates__info {
-  margin-top: 50px;
-  padding: 50px 10px 0 10px;
+  margin-top: 40px;
+  padding: 80px 10px 0 10px;
 }
 .coordinates__tel {
   margin: 0;
@@ -608,8 +608,89 @@ body .js-color {
 .coordinates__map {
   margin-top: 15px;
 }
+.shadow {
+  background-image: -ms-linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #000000 100%);
+  opacity: 0.2;
+  position: absolute;
+  left: -11px;
+  top: 6038px;
+  width: 1435px;
+  height: 30px;
+  z-index: 34;
+}
 .page-footer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #151c1c;
   outline: 1px solid black;
+}
+.page-footer__list {
+  margin: 0;
+  padding: 0 10px;
+  list-style: none;
+}
+.page-footer__item--info {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+  margin: auto;
+}
+.page-footer__item {
+  margin-top: 20px;
+}
+.page-footer__info {
+  display: flex;
+  font-size: 10px;
+  font-weight: normal;
+  align-items: flex-end;
+}
+.page__footer-logo {
+  flex-grow: 1;
+  display: block;
+  width: 40px;
+  height: 60px;
+  margin: 12px 0;
+  background: url("../img/small/ZS-white.png") no-repeat;
+  background-size: contain;
+}
+.page-footer__nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  WIDTH: 240px;
+  height: 85px;
+  margin: auto;
+  padding: 0;
+  list-style: none;
+}
+.page-footer__nav-item {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: 50%;
+  padding: 5px 0;
+  font-size: 12px;
+}
+.page-footer__nav-item a {
+  color: white;
+  text-decoration: underline;
+}
+.page-footer__item--design {
+  margin-top: 30px;
+  margin-bottom: 5px;
+}
+.page-footer__item--design a {
+  display: block;
+  width: 50px;
+  height: 30px;
+  margin: auto;
+  padding-top: 4px;
+  padding-left: 40px;
+  opacity: 0.5;
+  color: white;
+  font-size: 10px;
+  text-decoration: none;
+  background: url("../img/small/ED2.png") no-repeat;
 }
 .form label {
   display: flex;
