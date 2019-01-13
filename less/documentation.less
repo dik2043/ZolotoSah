@@ -7,12 +7,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 40px 0 0 0;
+  margin: 40px 0 10px 0;
   padding: 0;
 }
 
 .documentation__list picture {
-  margin-bottom: 10px;
+  
 }
 
 .documentation__description {
@@ -42,4 +42,47 @@
   border-radius: 5px;
   box-shadow: 0 2px 0 #a51e22;
   border: none;
+}
+
+
+@media (min-width: 768px) {
+  .documentation {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding-top: 50px;
+  }
+  
+  .documentation__list {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 50px auto 60px auto;
+    padding: 0 10px;
+  }
+
+  .documentation__list picture {
+    flex-shrink: 1;
+    width: 30%;
+    //margin-top: 50px;
+  }
+
+  .documentation__list picture img {
+    width: 100%;
+  }
+  
+  .documentation__description {
+    max-width: 635px;
+    margin: auto;
+    
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .documentation__request {
+    width: auto;
+    margin: 35px auto 0 auto;
+    padding: 20px 65px;
+
+    font-size: 26px;
+  }
 }

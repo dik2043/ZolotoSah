@@ -24,6 +24,9 @@
   list-style: none;
 }
 
+.garant__item {
+  position: relative;
+}
 
 .garant__item-title {
   margin: 25px 0 15px 0;
@@ -43,27 +46,46 @@
 
 .garant__item-description--1 {
   position: relative;
-  height: 180px;
+  min-height: 180px;
+  //overflow: visible;
 }
 
-.garant__item-description--1::before {
-  content: "Быстрая доставка — гарантия того, что на вашем прилавке будет самая свежая икра";
+.garant__item-slogan {
   position: absolute;
-  bottom: 0;
-  z-index: 2;
-  
-  display: block;
-  box-sizing: border-box;
-  width: 300px;
-  height: auto;
-  padding: 10px;
-  
-  font-size: 14px;
-  color: black;
-  font-style: italic;
-  
-  background-color: #dadada;
+    bottom: -10px;
+    z-index: 2;
+
+    display: block;
+    box-sizing: border-box;
+    width: 290px;
+    height: auto;
+    padding: 10px;  
+
+    font-size: 14px;
+    color: black;
+    font-style: italic;
+
+    background-color: #dadada;
 }
+
+//.garant__item-description--1::before {
+//  content: "Быстрая доставка — гарантия того, что на вашем прилавке будет самая свежая икра";
+//  position: absolute;
+//  bottom: 0;
+//  z-index: 2;
+//  
+//  display: block;
+//  box-sizing: border-box;
+//  width: 300px;
+//  height: auto;
+//  padding: 10px;  
+//  
+//  font-size: 14px;
+//  color: black;
+//  font-style: italic;
+//  
+//  background-color: #dadada;
+//}
 
 .garant__item-description--1::after {
   content: "";
@@ -80,4 +102,89 @@
   transform: rotate(45deg);
   //border-right: 20px solid #dadada;
   border-top: 20px solid #dadada;
+}
+
+
+@media (min-width: 768px) {
+  .garant {
+    min-height: 450px;
+    margin-top: 105px;
+    padding-top: 120px;
+  }
+  
+  .garant__list {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1020px;
+    margin: auto;
+    padding: 0 20px;
+  }
+  
+  .garant__item {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 230px;
+    padding: 0 10px;
+  }
+
+  .garant__item-slogan {
+    bottom: -30px;
+    
+    width: 370px;
+    padding: 15px;
+  }
+
+  .garant__item-description--1::after {
+    bottom: -10px;
+  }
+
+  .garant__item-description--1 {
+    position: relative;
+    min-height: 180px;
+    //overflow: visible;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .garant {
+    min-height: 540px;
+  }
+
+  .garant__list {
+    margin: auto;
+    padding: 0 20px;
+  }
+
+  .garant__item-title {
+    margin: 55px 0 15px 0;
+
+    font-size: 75px;
+  }
+
+  .garant__item-description {
+    width: 300px;
+
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .garant__item-slogan {
+    bottom: -50px;
+
+    width: 440px;
+    padding: 25px;
+    
+    font-size: 17px;
+  }
+
+  .garant__item-description--1::after {
+    bottom: 10px;
+  }
+
+  .garant__item-description--1 {
+    position: relative;
+    min-height: 230px;
+    //overflow: visible;
+  }
 }

@@ -23,6 +23,9 @@ function showSlides(n) {
     var slides = document.getElementsByClassName("slider__item");
     // console.log(slides);
     var links = document.getElementsByClassName("slider__link-item");
+    var linksTab = document.getElementsByClassName("slider__link-item-tab");
+    console.log(links);
+    console.log(linksTab);
     if (n > slides.length) {
         slideIndex = 1
     }
@@ -35,6 +38,16 @@ function showSlides(n) {
     for (i = 0; i < links.length; i++) {
         links[i].className = links[i].className.replace(" slider__link-item--active", "");
     }
+    //для планшетной
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < linksTab.length; i++) {
+        linksTab[i].className = linksTab[i].className.replace(" slider__link-item-tab--active", "");
+    }
     slides[slideIndex - 1].style.display = "block";
+    // slides[slideIndex - 1].classList.add('opacity');
+    // slides[slideIndex - 1].style.opacity = "0.9";
     links[slideIndex - 1].className += " slider__link-item--active";
+    linksTab[slideIndex - 1].className += " slider__link-item-tab--active";
 }

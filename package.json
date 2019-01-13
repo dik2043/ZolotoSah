@@ -11,12 +11,13 @@
     "grunt-browser-sync": "^2.2.0",
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-watch": "^1.1.0",
-    "grunt-postcss": "^0.9.0",
     "install": "^0.12.2",
     "package-json": "^5.0.0",
     "pixrem": "^4.0.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "grunt-postcss": "^0.9.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "grunt dev",
