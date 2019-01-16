@@ -28,17 +28,20 @@
 }
 
 .page-footer__info {  
-  display: flex;
+  //display: flex;
+  //flex-wrap: nowrap;
+  margin-top: 35px;
   
   font-size: 10px;  
   font-weight: normal;
-  align-items: flex-end;
+  //align-items: flex-end;
 }
 
 .page__footer-logo {
   flex-grow: 1;
+  flex-shrink: 0;
   display: block;
-  width: 40px;
+  width: 132px;
   height: 60px;
   margin: 12px 0;
   
@@ -50,7 +53,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  WIDTH: 240px;
+  WIDTH: 260px;
   height: 85px;
   margin: auto;
   padding: 0;
@@ -62,6 +65,7 @@
   flex-grow: 0;
   flex-shrink: 0;
   width: 50%;
+  min-width: 120px;
   padding: 5px 0;
   
   font-size: 12px;
@@ -93,3 +97,55 @@
   background: url("../img/small/ED2.png") no-repeat;
   //outline: 1px solid white;
 }
+
+
+@media (min-width: 768px) {
+  .page-footer {
+    display: flex;
+    align-items: center;
+    //justify-content: center;
+    min-height: 225px;
+  }
+  
+  .page-footer__list {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+    flex-shrink: 0;
+    width: 97%;
+    max-width: 1020px;
+    //margin: auto;
+  }
+  
+  .page-footer__item {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+  
+  .page-footer__item--info {  
+    max-width: 350px;
+    margin: 27px 0 0 0;
+  }
+  
+  .page-footer__item--nav {
+    margin-top: 55px;
+  }
+  
+  .page-footer__item--design {
+    margin-top: 60px;
+    //margin-left: 18%;
+  }
+
+  .page-footer__item--design a {
+    margin: 0 0 0 auto;
+  }
+}
+
+//@media (min-width: 768px) and (max-width: 1024px) {
+//  display: flex;
+//  justify-content: space-between;
+//  flex-grow: 1;
+//  flex-shrink: 0;
+//  width: 1020px;
+//  //margin: auto;
+//}

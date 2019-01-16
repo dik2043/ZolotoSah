@@ -17,7 +17,7 @@
             <div class="page-header__contacts">
                 <p class="page-header__tel">+7 495 983-34-67</p>
                 <a class="page-header__mail" href="mailto:hello@zolotosah.ru">hello@zolotosah.ru</a>
-                <a class="page-header__call" href="#">Заказать звонок</a>
+                <a class="page-header__call" onclick="showPopup()">Заказать звонок</a>
             </div>
         </div>
         <nav class="page-header__main-nav --no-js">
@@ -36,7 +36,7 @@
         
         <section class="about">
             <h1 class="about__title">Оптовые продажи красной икры <br> с&nbsp;доставкой</h1>
-            <a class="about__to-order" href="#">Заказать</a>
+            <a class="about__to-order" onclick="showPopup()">Заказать</a>
         </section>
         
         <section class="catalog-salmon">
@@ -188,7 +188,7 @@
                     </div>
                 </li>
             </ul>
-            <button class="catalog-salmon__request request">Запросить прайс</button>                
+            <button class="catalog-salmon__request request" onclick="showPopup()">Запросить прайс</button>                
         </section>
         
         <section class="catalog-halibut">
@@ -263,7 +263,7 @@
                     </div>
                 </li>
             </ul>
-            <button class="catalog-halibut__request request">Запросить прайс</button>
+            <button class="catalog-halibut__request request" onclick="showPopup()">Запросить прайс</button>
         </section>
         
         <section class="slider__main">
@@ -328,7 +328,7 @@
                     <a class="slider__link-item-tab" onclick="currentSlide(5)">Логистика</a>
                 </div>
             </div>
-            <button class="slider__request request">Запросить прайс</button>
+            <button class="slider__request request" onclick="showPopup()">Запросить прайс</button>
         </section>
         
         <section class="garant">
@@ -349,25 +349,30 @@
                 </li>
             </ul>   
         </section>
-        
+
+        <div class="documentation__back unshow"></div>
         <section class="documentation">
             <h2 class="documentation__title title">Документация</h2>
             <ul class="documentation__list">
-                <picture>
+                <picture onclick="showDocPopup(0)">
                     <source media="(min-width:768px)" srcset="img/small/tablet/sert-t(1).png">
                     <img class="documentation__img" src="img/small/mobile/sert-m(1).png">
                 </picture>
-                <picture>
+                <picture onclick="showDocPopup(1)">
                     <source media="(min-width:768px)" srcset="img/small/tablet/sert-t(2).png">
                     <img class="documentation__img" src="img/small/mobile/sert-m(2).png">
                 </picture>
-                <picture>
+                <picture onclick="showDocPopup(2)">
                     <source media="(min-width:768px)" srcset="img/small/tablet/sert-t(3).png">
                     <img class="documentation__img" src="img/small/mobile/sert-m(3).png">
                 </picture>
             </ul>
             <p class="documentation__description">Вне зависимости от тары, на всю продукцию мы предоставляем документы, необходимые для ее дальнейшей легальной реализации.  </p>
-            <button class="documentation__request">Запросить пакет документов</button>
+            <button class="documentation__request" onclick="showPopup()">Запросить пакет документов</button>
+
+            <img class="documentation__img-big unshow" src="img/small/tablet/sert-t(1).png">
+            <img class="documentation__img-big unshow" src="img/small/tablet/sert-t(2).png">
+            <img class="documentation__img-big unshow" src="img/small/tablet/sert-t(3).png">
         </section>
         
         <section class="coordinates">
@@ -390,8 +395,28 @@
                 </form>
             </div>
             <div class="coordinates__map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2249.3006483401414!2d37.86366571617244!3d55.683760580534944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0KDQvtGB0YHQuNGPLCDQsy4g0JvRjtCx0LXRgNGG0YssINGD0LsuINCT0L7RgNC-0LTQvtC6INCRLCA1OdCw!5e0!3m2!1sru!2sru!4v1546155318487" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2249.3006483401414!2d37.86366571617244!3d55.683760580534944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z0KDQvtGB0YHQuNGPLCDQsy4g0JvRjtCx0LXRgNGG0YssINGD0LsuINCT0L7RgNC-0LTQvtC6INCRLCA1OdCw!5e0!3m2!1sru!2sru!4v1546155318487" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
+        </section>
+
+        <div class="popup__back unshow"></div>
+        <section class="popup unshow">
+            
+            <h3 class="popup__title">Запрос прайс-листа</h3>
+            <p class="popup__form-title">Пожалуйста, заполните все поля формы, и менеджер вышлет вам актуальный прайс лист в течение суток.</p>
+            <form class="popup__form">
+                <label class="popup__name-label" for="pop-name">Имя
+                    <input class="popup__name" type="text" id="pop-name" name="pop-name" placeholder="Константин">
+                </label>
+                <label class="popup__mail-label" for="pop-mail">Телефон или <br> почта
+                    <input class="popup__mail" type="text" id="pop-mail" name="pop-mail" placeholder="kostik65@gmail.com">
+                </label>
+                <label class="popup__mail-label" for="pop-text">Комментарий
+                    <textarea class="popup__text" id="pop-text" name="pop-text"></textarea>
+                </label>
+                <input class="popup__submit" type="submit" value="Отправить">                
+            </form>
+            <button class="popup__toggle"></button>
         </section>
         
     </main>
@@ -400,16 +425,16 @@
         <ul class="page-footer__list">
             <li class="page-footer__item page-footer__item--info">
                 <a class="page__footer-logo"></a>
-                <p class="page-footer__info">© 2008–2016 ООО «Золото Сахалина» <br> Россия, г. Люберцы, ул. Городок Б, 59а <br> +7 495 983-34-67</p>
+                <p class="page-footer__info">© 2008–2016 ООО «Золото Сахалина»  Россия, г.Люберцы, ул.Городок Б,59а  <br> +7 495 983-34-67</p>
             </li>
             <li class="page-footer__item page-footer__item--nav">
                 <ul class="page-footer__nav">
                     <li class="page-footer__nav-item"><a href="#">Продукция</a></li>
                     <li class="page-footer__nav-item"><a href="#">О компании</a></li>
                     <li class="page-footer__nav-item"><a href="#">Документация</a></li>
-                    <li class="page-footer__nav-item"><a href="#">Запросить прайс-лист</a></li>
-                    <li class="page-footer__nav-item"><a href="#">Задать вопрос</a></li>
-                    <li class="page-footer__nav-item"><a href="#">Заказать вопрос</a></li>
+                    <li class="page-footer__nav-item"><a onclick="showPopup()">Запросить прайс-лист</a></li>
+                    <li class="page-footer__nav-item"><a onclick="showPopup()">Задать вопрос</a></li>
+                    <li class="page-footer__nav-item"><a onclick="showPopup()">Заказать звонок</a></li>
                 </ul>
             </li>
             <li class="page-footer__item page-footer__item--design">
@@ -422,6 +447,8 @@
     <script src="js/navigation.js "></script>
     <script src="js/scriptHalibut.js "></script>
     <script src="js/slider-2.js "></script>
+    <script src="js/popup.js "></script>
+    <script src="js/docPopup.js "></script>
 
 </body>
 

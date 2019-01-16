@@ -34,3 +34,49 @@
   height: 30px;
   z-index: 34;
 }
+
+@media (min-width: 768px) {
+  .coordinates {
+    flex-direction: row;   
+    justify-content: flex-start;
+    max-width: 1020px;
+    margin: 0 auto 0 auto;
+    padding: 0;
+
+    background: url("../img/small/ZS-bottom.png") 10px 60px no-repeat;
+  }
+  
+  .coordinates__info {
+    width: 340px;
+    min-height: 545px;
+    margin: 0;
+    padding: 135px 40px 0 10px;
+  }
+
+  .coordinates__map {
+    position: absolute;
+    right: 0;
+    left: 390px;
+    
+    flex-grow: 1;
+    height: 679px;
+    margin-top: 0;
+  }
+  
+  .coordinates__form-title {
+    margin: 20px 0;
+  }
+}
+
+
+@media (min-width: 1000px) {
+  .coordinates__map {
+    left: 39%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .coordinates__map {
+    left: 44%;
+  }
+}
