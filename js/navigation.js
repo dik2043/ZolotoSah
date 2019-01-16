@@ -16,7 +16,12 @@ navToggle.addEventListener('click', function () {
         mainNav.classList.add('--closed');
         mainNav.classList.remove('--opened')
     }
-})
+});
+
+function closeNav() {
+    mainNav.classList.add('--closed');
+    mainNav.classList.remove('--opened')
+}
 
 
 

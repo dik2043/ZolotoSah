@@ -136,7 +136,7 @@ body .unshow {
   }
 }
 .site-list__toggle {
-  position: absolute;
+  position: fixed;
   top: 23px;
   left: 90%;
   width: 24px;
@@ -163,6 +163,7 @@ body .unshow {
 @media (max-width: 767px) {
   .site-list {
     position: fixed;
+    z-index: 10;
     top: 0;
     box-sizing: border-box;
     width: 285px;

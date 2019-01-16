@@ -23,11 +23,11 @@
         <nav class="page-header__main-nav --no-js">
             <button class="page-header__toggle site-list__toggle"></button>
             <ul class="page-header__nav site-list">
-                <li class="site-list__item"><a href="#">Продукция</a></li>
-                <li class="site-list__item"><a href="#">О компании</a></li>
-                <li class="site-list__item"><a href="#">Преимущества</a></li>
-                <li class="site-list__item"><a href="#">Документация</a></li>
-                <li class="site-list__item"><a href="#">Контактная информация</a></li>
+                <li class="site-list__item"><a href="#catalog-salmon" onclick="closeNav()">Продукция</a></li>
+                <li class="site-list__item"><a href="#slider" onclick="closeNav()">О компании</a></li>
+                <li class="site-list__item"><a href="#garant" onclick="closeNav()">Преимущества</a></li>
+                <li class="site-list__item"><a href="#documentation" onclick="closeNav()">Документация</a></li>
+                <li class="site-list__item"><a href="#page-footer" onclick="closeNav()">Контактная информация</a></li>
             </ul>
         </nav>
     </header>
@@ -39,7 +39,7 @@
             <a class="about__to-order" onclick="showPopup()">Заказать</a>
         </section>
         
-        <section class="catalog-salmon">
+        <section class="catalog-salmon" id="catalog-salmon">
             <h2 class="catalog-salmon__title title">Икра лососевая</h2>
             <ul class="catalog-salmon__list">
                 <li class="catalog-salmon__item js-item">
@@ -266,7 +266,7 @@
             <button class="catalog-halibut__request request" onclick="showPopup()">Запросить прайс</button>
         </section>
         
-        <section class="slider__main">
+        <section class="slider__main" id="slider">
             <nav class="slider__nav">
                 <div class="slider">
                     <div class="slider__wrapper">
@@ -331,7 +331,7 @@
             <button class="slider__request request" onclick="showPopup()">Запросить прайс</button>
         </section>
         
-        <section class="garant">
+        <section class="garant" id="garant">
             <h2 class="garant__title title">Мы гарантируем</h2>
             <ul class="garant__list">
                 <li class="garant__item">
@@ -351,7 +351,7 @@
         </section>
 
         <div class="documentation__back unshow"></div>
-        <section class="documentation">
+        <section class="documentation" id="documentation">
             <h2 class="documentation__title title">Документация</h2>
             <ul class="documentation__list">
                 <picture onclick="showDocPopup(0)">
@@ -421,7 +421,7 @@
         
     </main>
     
-    <footer class="page-footer">
+    <footer class="page-footer" id="page-footer">
         <ul class="page-footer__list">
             <li class="page-footer__item page-footer__item--info">
                 <a class="page__footer-logo"></a>
@@ -429,9 +429,9 @@
             </li>
             <li class="page-footer__item page-footer__item--nav">
                 <ul class="page-footer__nav">
-                    <li class="page-footer__nav-item"><a href="#">Продукция</a></li>
-                    <li class="page-footer__nav-item"><a href="#">О компании</a></li>
-                    <li class="page-footer__nav-item"><a href="#">Документация</a></li>
+                    <li class="page-footer__nav-item"><a href="#catalog-salmon">Продукция</a></li>
+                    <li class="page-footer__nav-item"><a href="#slider">О компании</a></li>
+                    <li class="page-footer__nav-item"><a href="#documentation">Документация</a></li>
                     <li class="page-footer__nav-item"><a onclick="showPopup()">Запросить прайс-лист</a></li>
                     <li class="page-footer__nav-item"><a onclick="showPopup()">Задать вопрос</a></li>
                     <li class="page-footer__nav-item"><a onclick="showPopup()">Заказать звонок</a></li>
