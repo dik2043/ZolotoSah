@@ -51,7 +51,7 @@
   
   .site-list {
       position: fixed;
-    z-index: 10;
+      z-index: 10;
       top: 0;
       //left: 0;
       box-sizing: border-box;
@@ -96,6 +96,20 @@
     
     transition: transform 0.3s linear;
   }
+
+  .--closed-start .site-list__toggle::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 24px;
+    height: 2px;
+
+    //background: linear-gradient(to right, #db3232, #ff503a);
+    box-shadow: 0 8px 0 0 #db3232, 0 16px 0 0 #db3232;
+    background-color: #db3232;
+  }
   
   .--closed .site-list__toggle::before {
     content: "";
@@ -109,6 +123,12 @@
     //background: linear-gradient(to right, #db3232, #ff503a);
     box-shadow: 0 8px 0 0 #db3232, 0 16px 0 0 #db3232;
     background-color: #db3232;
+  }
+
+  .--closed-start .site-list {
+    transform: translateX(-285px);
+
+    //transition: transform 0.3s linear;
   }
   
   .--closed .site-list {

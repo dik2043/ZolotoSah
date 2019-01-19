@@ -10,17 +10,21 @@ var popupToggle = document.querySelector('.popup__toggle');
 // });
 
 function showPopup() {
-    popup.classList.remove('unshow');
+    // popup.classList.remove('unshow');
+    popup.classList.remove('popup__animation-up');
+    popup.classList.add('popup__animation-down');
     popupBack.classList.remove('unshow');
 }
 
 popupToggle.addEventListener('click', function() {
-    popup.classList.add('unshow');
+    popup.classList.remove('popup__animation-down');
+    popup.classList.add('popup__animation-up');
     popupBack.classList.add('unshow');
 });
 
+popupBack.addEventListener('click', function() {
+    popup.classList.remove('popup__animation-down');
+    popup.classList.add('popup__animation-up');
+    popupBack.classList.add('unshow');
+});
 
-
-
-// popup.classList.remove('unshow');
-// popupBack.classList.remove('unshow');

@@ -6,12 +6,12 @@
     <meta id="meta" name="viewport" content="width=device-width,initial-scale=1">
     <title>Золото Сахалина</title>
     <link rel="stylesheet" href="css/style.css">
-    <!--<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700|Ubuntu:400,700" rel="stylesheet">-->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-    <header class="page-header">
+    <header class="page-header" id="page-header">
         <div class="page-header__wrapper">
             <img class="page-header__logo" src="img/small/ZSlogo.png">
             <div class="page-header__contacts">
@@ -20,14 +20,15 @@
                 <a class="page-header__call" onclick="showPopup()">Заказать звонок</a>
             </div>
         </div>
-        <nav class="page-header__main-nav --no-js">
+        <nav class="page-header__main-nav --no-js --closed-start">
             <button class="page-header__toggle site-list__toggle"></button>
+            <a class="page-header__up" href="#page-header"></a>
             <ul class="page-header__nav site-list">
                 <li class="site-list__item"><a href="#catalog-salmon" onclick="closeNav()">Продукция</a></li>
                 <li class="site-list__item"><a href="#slider" onclick="closeNav()">О компании</a></li>
                 <li class="site-list__item"><a href="#garant" onclick="closeNav()">Преимущества</a></li>
                 <li class="site-list__item"><a href="#documentation" onclick="closeNav()">Документация</a></li>
-                <li class="site-list__item"><a href="#page-footer" onclick="closeNav()">Контактная информация</a></li>
+                <li class="site-list__item"><a href="#coordinates" onclick="closeNav()">Контактная информация</a></li>
             </ul>
         </nav>
     </header>
@@ -375,7 +376,7 @@
             <img class="documentation__img-big unshow" src="img/small/tablet/sert-t(3).png">
         </section>
         
-        <section class="coordinates">
+        <section class="coordinates" id="coordinates">
             <div class="coordinates__info">
                 <p class="coordinates__adress">Россия, г. Люберцы, ул. Городок Б, 59а</p>
                 <p class="coordinates__tel">+7 495 983-34-67</p>
@@ -400,7 +401,7 @@
         </section>
 
         <div class="popup__back unshow"></div>
-        <section class="popup unshow">
+        <section class="popup">
             
             <h3 class="popup__title">Запрос прайс-листа</h3>
             <p class="popup__form-title">Пожалуйста, заполните все поля формы, и менеджер вышлет вам актуальный прайс лист в течение суток.</p>
@@ -444,12 +445,13 @@
     </footer>
 
     
-    <script src="js/navigation.js "></script>
-    <script src="js/scriptHalibut.js "></script>
-    <script src="js/slider-2.js "></script>
-    <script src="js/popup.js "></script>
-    <script src="js/docPopup.js "></script>
-
+    <script src="js/navigation.js"></script>
+    <script src="js/scriptHalibut.js"></script>
+    <script src="js/slider-2.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="js/docPopup.js"></script>
+    <script src="js/animation.js"></script>
+    
 </body>
 
 </html>
